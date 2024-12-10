@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="car-details">
+    <h1><%= carro.modelo %></h1>
+    <img src="<%= carro.imagem %>" alt="<%= carro.modelo %>">
+    <p><%= carro.descricao %></p>
+    <ul>
+      <li>Velocidade Máxima: <%= carro.velocidade_max %> km/h</li>
+      <li>Aceleração: <%= carro.aceleracao %>s (0-100 km/h)</li>
+      <li>Preço: R$ <%= carro.preco %></li>
+    </ul>
+  </div>
+</body>
+</html>

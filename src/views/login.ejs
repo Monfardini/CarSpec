@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="login-container">
+    <form action="/usuarios/login" method="POST">
+      <h1>Entrar</h1>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="password" name="senha" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+      <p><a href="/recuperar-senha">Esqueceu sua senha?</a></p>
+    </form>
+  </div>
+</body>
+</html>

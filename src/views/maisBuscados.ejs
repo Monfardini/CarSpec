@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="most-searched">
+    <h1>Carros Mais Buscados</h1>
+    <aside class="filters">
+      <h2>Filtrar por Categoria</h2>
+      <form action="/maisBuscados" method="GET">
+        <% categorias.forEach(categoria => { %>
+          <div>
+            <input type="checkbox" id="<%= categoria.nome %>" name="categorias" value="<%= categoria.id %>">
+            <label for="<%= categoria.nome %>"><%= categoria.nome %></label>
+          </div>
+        <% }) %>
+        <button type="submit">Aplicar Filtros</button>
+      </form>
+    </aside>
+    <div class="car-list">
+      <% maisBuscados.forEach(carro => { %>
+        <div class="car-card">
+          <img src="<%= carro.imagem %>" alt="<%= carro.modelo %>">
+          <h2><%= carro.modelo %></h2>
+          <button onclick="location.href='/carros/<%= carro.id %>'">Ver detalhes</button>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>

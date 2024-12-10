@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="profiles-container">
+    <h1>Selecione seu perfil</h1>
+    <div class="profiles">
+      <% perfis.forEach(perfil => { %>
+        <div class="profile">
+          <h2><%= perfil.nome %></h2>
+          <button onclick="location.href='/home'">Selecionar</button>
+        </div>
+      <% }) %>
+    </div>
+    <button onclick="location.href='/criar-perfil'">Criar novo perfil</button>
+  </div>
+</body>
+</html>

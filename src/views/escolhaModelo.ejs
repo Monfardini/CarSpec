@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="choose-model">
+    <h1>Modelos da <%= montadora.nome %></h1>
+    <div class="model-list">
+      <% modelos.forEach(modelo => { %>
+        <div class="model-card">
+          <img src="<%= modelo.imagem %>" alt="<%= modelo.nome %>">
+          <h2><%= modelo.nome %></h2>
+          <button onclick="location.href='/carros/<%= modelo.id %>'">Ver detalhes</button>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="search-results">
+    <h1>Resultados para "<%= query %>"</h1>
+    <ul>
+      <% resultados.forEach(carro => { %>
+        <li>
+          <img src="<%= carro.imagem %>" alt="<%= carro.modelo %>">
+          <a href="/carros/<%= carro.id %>"><%= carro.modelo %></a>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>

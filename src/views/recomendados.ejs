@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <div class="recommended">
+    <h1>Recomendações para você</h1>
+    <ul>
+      <% recomendados.forEach(carro => { %>
+        <li>
+          <img src="<%= carro.imagem %>" alt="<%= carro.modelo %>">
+          <a href="/carros/<%= carro.id %>"><%= carro.modelo %></a>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>
